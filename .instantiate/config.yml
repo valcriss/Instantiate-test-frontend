@@ -1,0 +1,13 @@
+# .instantiate/config.yml
+orchestrator: compose
+stackfile: docker-compose.yml
+
+services:
+  front:
+    ports: 1
+  backend:
+    repository:
+      repo: https://github.com/valcriss/Instantiate-test-backend.git
+      branch: main
+      behavior: match
+    ports: 1

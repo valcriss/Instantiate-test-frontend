@@ -1,0 +1,13 @@
+# .instantiate/docker-compose.yml
+services:
+  front:
+    build: .
+    ports:
+      - "{{FRONT_PORT}}:3000"
+    environment:
+      - BACKEND_URL: {{HOST_DNS}}:{{BACKEND_PORT}}
+  backend:
+    build:
+      context: {{BACKEND_PATH}}
+    ports:
+      - "{{BACKEND_PORT}}:3000"
