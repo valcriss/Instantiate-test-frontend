@@ -9,7 +9,8 @@ services:
     prebuild:
       image: node:23
       commands:
-        - npm install
+        - ls -la
+        - npm ci
     repository:
       repo: https://github.com/valcriss/Instantiate-test-backend.git
       branch: main
