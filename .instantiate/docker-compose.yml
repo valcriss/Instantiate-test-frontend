@@ -5,7 +5,7 @@ services:
     ports:
       - "{{FRONT_PORT}}:3000"
     environment:
-      - BACKEND_URL: {{HOST_DNS}}:{{BACKEND_PORT}}
+      - BACKEND_URL={{HOST_DNS}}:{{BACKEND_PORT}}
   backend:
     build:
       context: {{BACKEND_PATH}}
