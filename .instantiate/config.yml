@@ -6,6 +6,10 @@ services:
   front:
     ports: 1
   backend:
+    prebuild:
+      image: node:23
+      commands:
+        - npm install
     repository:
       repo: https://github.com/valcriss/Instantiate-test-backend.git
       branch: main
